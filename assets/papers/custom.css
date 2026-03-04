@@ -1,5 +1,5 @@
 /* assets/custom.css */
-
+html { background: hotpink !important; }
 /* --- Palette (from your screenshot) --- */
 :root{
   --bg: #f8f5f2;        /* beige */
