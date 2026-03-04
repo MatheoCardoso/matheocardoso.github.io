@@ -1,0 +1,46 @@
+/* assets/custom.css */
+
+/* Soft page background + readable text */
+:root{
+  --bg: #fbf7ef;        /* beige */
+  --panel: #ffffff;     /* white cards */
+  --ink: #2e2e2e;
+
+  --accent: #8fb9ff;    /* pastel blue */
+  --accent2: #9fe3c2;   /* pastel green */
+  --accent3: #f6b7c7;   /* pastel pink */
+}
+
+html { background: var(--bg); }
+body { color: var(--ink); }
+
+/* Make Bulma sections feel airy */
+.section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+
+/* Soft “cards” */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+.card + .card { margin-top: 1rem; }
+
+/* Pastel hero */
+.hero.is-soft {
+  background: linear-gradient(120deg, rgba(143,185,255,.35), rgba(159,227,194,.25), rgba(246,183,199,.25));
+}
+
+/* Links + buttons */
+a { color: #2a5bd7; }
+a:hover { text-decoration: underline; }
+
+.button.is-accent {
+  background: var(--accent);
+  border-color: transparent;
+  color: #0f1b2d;
+}
+.button.is-accent:hover { filter: brightness(0.98); }
+
+/* Tags/pills */
+.tag.is-accent { background: rgba(143,185,255,.35); color: #0f1b2d; }
+.tag.is-mint   { background: rgba(159,227,194,.35); color: #0f1b2d; }
+.tag.is-rose   { background: rgba(246,183,199,.35); color: #0f1b2d; }
