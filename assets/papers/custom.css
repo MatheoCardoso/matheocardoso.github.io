@@ -1,46 +1,81 @@
 /* assets/custom.css */
 
-/* Soft page background + readable text */
+/* --- Palette (from your screenshot) --- */
 :root{
-  --bg: #fbf7ef;        /* beige */
+  --bg: #f8f5f2;        /* beige */
   --panel: #ffffff;     /* white cards */
-  --ink: #2e2e2e;
+  --ink: #2f2b3a;       /* readable dark (not pure black) */
 
-  --accent: #8fb9ff;    /* pastel blue */
-  --accent2: #9fe3c2;   /* pastel green */
-  --accent3: #f6b7c7;   /* pastel pink */
+  --lav: #89869f;       /* lavender */
+  --sea: #a0cda7;       /* seafoam */
+  --mist:#a2c3cb;       /* ocean mist */
+  --sand:#ebd3a2;       /* sand */
+  --rose:#c690a2;       /* blush */
+  --peach:#e6bfab;      /* peach */
+
+  --link: #4b5aa6;      /* muted indigo link */
 }
 
+/* Page background + base text */
 html { background: var(--bg); }
 body { color: var(--ink); }
 
-/* Make Bulma sections feel airy */
-.section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+/* Softer default fonts */
+body, .title, .subtitle { letter-spacing: 0.2px; }
 
-/* Soft “cards” */
-.card {
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+/* NAVBAR */
+.navbar {
+  background: rgba(248,245,242,0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(137,134,159,0.18);
 }
-.card + .card { margin-top: 1rem; }
+.navbar-item, .navbar-link { color: var(--ink); }
+.navbar-item:hover { background: rgba(162,195,203,0.18); }
 
-/* Pastel hero */
+/* HERO: ocean-oriented pastel gradient */
 .hero.is-soft {
-  background: linear-gradient(120deg, rgba(143,185,255,.35), rgba(159,227,194,.25), rgba(246,183,199,.25));
+  background:
+    radial-gradient(800px 400px at 15% 20%, rgba(160,205,167,0.45), transparent 60%),
+    radial-gradient(700px 380px at 70% 30%, rgba(162,195,203,0.45), transparent 60%),
+    radial-gradient(800px 420px at 45% 80%, rgba(198,144,162,0.28), transparent 60%),
+    linear-gradient(180deg, rgba(248,245,242,1), rgba(248,245,242,0.65));
 }
 
-/* Links + buttons */
-a { color: #2a5bd7; }
+/* Layout spacing */
+.section { padding-top: 2.75rem; padding-bottom: 2.75rem; }
+
+/* Cards: rounded + soft shadow */
+.card {
+  border-radius: 18px;
+  border: 1px solid rgba(137,134,159,0.14);
+  box-shadow: 0 12px 28px rgba(47,43,58,0.06);
+}
+.card .title { color: var(--ink); }
+
+/* Links */
+a { color: var(--link); }
 a:hover { text-decoration: underline; }
 
+/* Buttons: create your own “accent” button */
 .button.is-accent {
-  background: var(--accent);
-  border-color: transparent;
-  color: #0f1b2d;
+  background: rgba(162,195,203,0.65); /* mist */
+  border-color: rgba(137,134,159,0.18);
+  color: var(--ink);
 }
 .button.is-accent:hover { filter: brightness(0.98); }
 
-/* Tags/pills */
-.tag.is-accent { background: rgba(143,185,255,.35); color: #0f1b2d; }
-.tag.is-mint   { background: rgba(159,227,194,.35); color: #0f1b2d; }
-.tag.is-rose   { background: rgba(246,183,199,.35); color: #0f1b2d; }
+.button.is-light {
+  background: rgba(255,255,255,0.70);
+  border-color: rgba(137,134,159,0.18);
+}
+
+/* Tags: pastel pills */
+.tag.is-lav   { background: rgba(137,134,159,0.22); color: var(--ink); }
+.tag.is-sea   { background: rgba(160,205,167,0.28); color: var(--ink); }
+.tag.is-mist  { background: rgba(162,195,203,0.28); color: var(--ink); }
+.tag.is-sand  { background: rgba(235,211,162,0.35); color: var(--ink); }
+.tag.is-rose  { background: rgba(198,144,162,0.25); color: var(--ink); }
+.tag.is-peach { background: rgba(230,191,171,0.35); color: var(--ink); }
+
+/* Small helper */
+.muted { opacity: 0.82; }
