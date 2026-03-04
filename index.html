@@ -3,89 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Portfolio</title>
+  <title>Your Name — Political Science</title>
+
+  <!-- Simple, good-looking default styles (no install) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
   <style>
-    :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; line-height: 1.5; }
-    header, main, footer { max-width: 900px; margin: 0 auto; padding: 24px; }
-    header { padding-top: 48px; }
-    nav a { margin-right: 12px; }
-    .card { border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin: 12px 0; }
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .muted { opacity: 0.8; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .pill { display:inline-block; padding: 2px 10px; border:1px solid #ccc; border-radius:999px; font-size: 12px; margin-right: 6px; }
+    /* Small customization layer */
+    header.hero { padding-top: 3rem; padding-bottom: 1rem; }
+    .muted { opacity: .75; }
+    .pill { display:inline-block; padding:.15rem .55rem; border:1px solid var(--pico-muted-border-color); border-radius:999px; font-size:.85rem; margin-right:.35rem; }
+    footer { margin-top: 3rem; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p class="muted">Short one-liner: what you do / what you’re looking for.</p>
+  <main class="container">
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/myname">GitHub</a>
-      <a href="resume.pdf">Resume</a>
+      <ul>
+        <li><strong>Your Name</strong></li>
+      </ul>
+      <ul>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <main>
-    <section id="projects">
-      <h2>Projects</h2>
+    <header class="hero">
+      <h1>Political Science</h1>
+      <p class="muted">
+        Short description of your research focus (e.g., political economy, institutions, public policy).
+      </p>
+      <p>
+        <a role="button" href="publications.html">Read my papers</a>
+        <a class="secondary" role="button" href="news.html">Latest updates</a>
+      </p>
+      <p class="muted">
+        <a href="https://github.com/yourname">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/yourname">LinkedIn</a> ·
+        <a href="mailto:you@email.com">you@email.com</a>
+      </p>
+    </header>
+
+    <hr />
+
+    <section>
+      <h2>Research themes</h2>
+      <p class="muted">A short “CNRS-like” overview paragraph describing what you work on and why it matters.</p>
+      <p>
+        <span class="pill">Comparative politics</span>
+        <span class="pill">Public policy</span>
+        <span class="pill">Elections</span>
+        <span class="pill">Political economy</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Featured</h2>
       <div class="grid">
-        <article class="card">
-          <h3>Project Title</h3>
-          <p class="muted">1–2 lines describing what it is and what you did.</p>
-          <div>
-            <span class="pill">Python</span>
-            <span class="pill">Data</span>
-          </div>
-          <p>
-            <a href="https://github.com/myname/project">Code</a> ·
-            <a href="https://example.com">Live demo</a>
-          </p>
+        <article>
+          <h3>New working paper</h3>
+          <p class="muted">One sentence summary of the research question and your contribution.</p>
+          <p><a href="publications.html">View publication →</a></p>
         </article>
-
-        <article class="card">
-          <h3>Another Project</h3>
-          <p class="muted">What problem it solved / what you learned.</p>
-          <div>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-          </div>
-          <p>
-            <a href="https://github.com/myname/another">Code</a>
-          </p>
+        <article>
+          <h3>Latest update</h3>
+          <p class="muted">E.g., “Presented at X” or “Data release” or “New preprint uploaded”.</p>
+          <p><a href="news.html">Read news →</a></p>
+        </article>
+        <article>
+          <h3>Media</h3>
+          <p class="muted">Links to explainers, interviews, and future YouTube videos.</p>
+          <p><a href="media.html">Browse media →</a></p>
         </article>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        A short bio: what you’re good at, what you enjoy, what kind of roles/projects you want.
-      </p>
-      <ul>
-        <li><strong>Skills:</strong> …</li>
-        <li><strong>Tools:</strong> …</li>
-        <li><strong>Highlights:</strong> …</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:you@email.com">you@email.com</a><br />
-        LinkedIn: <a href="https://linkedin.com/in/yourname">linkedin.com/in/yourname</a>
-      </p>
-    </section>
+    <footer class="muted">
+      <small>© <span id="y"></span> Your Name</small>
+    </footer>
   </main>
-
-  <footer class="muted">
-    <small>© <span id="y"></span> Your Name</small>
-  </footer>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
