@@ -1,81 +1,82 @@
 /* assets/custom.css */
 
-/* --- Palette (from your screenshot) --- */
+/* Pastel-ocean palette */
 :root{
-  --bg: #f8f5f2;        /* beige */
-  --panel: #ffffff;     /* white cards */
-  --ink: #2f2b3a;       /* readable dark (not pure black) */
+  --bg: #f8f5f2;      /* beige background */
+  --panel: #ffffff;   /* cards */
+  --ink: #2f2b3a;     /* readable dark text */
+  --muted: #6f6b80;
 
-  --lav: #89869f;       /* lavender */
-  --sea: #a0cda7;       /* seafoam */
-  --mist:#a2c3cb;       /* ocean mist */
-  --sand:#ebd3a2;       /* sand */
-  --rose:#c690a2;       /* blush */
-  --peach:#e6bfab;      /* peach */
+  --lav: #89869f;
+  --sea: #a0cda7;
+  --mist:#a2c3cb;
+  --sand:#ebd3a2;
+  --rose:#c690a2;
+  --peach:#e6bfab;
 
-  --link: #4b5aa6;      /* muted indigo link */
+  --link: #4b5aa6;
 }
 
-/* Page background + base text */
-html { background: var(--bg); }
-body { color: var(--ink); }
+/* Force light look (prevents “mystery dark”) */
+html, body { background: var(--bg) !important; color: var(--ink) !important; }
+* { color-scheme: light; }
 
-/* Softer default fonts */
-body, .title, .subtitle { letter-spacing: 0.2px; }
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
 
-/* NAVBAR */
+.muted { color: var(--muted); }
+
+/* Navbar: light, slightly translucent */
 .navbar {
-  background: rgba(248,245,242,0.72);
+  background: rgba(248,245,242,0.78);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(137,134,159,0.18);
 }
-.navbar-item, .navbar-link { color: var(--ink); }
-.navbar-item:hover { background: rgba(162,195,203,0.18); }
+.navbar-item, .navbar-link { color: var(--ink) !important; }
+.navbar-item:hover { background: rgba(162,195,203,0.18) !important; }
 
-/* HERO: ocean-oriented pastel gradient */
+/* Hero: ocean gradient */
 .hero.is-soft {
   background:
-    radial-gradient(800px 400px at 15% 20%, rgba(160,205,167,0.45), transparent 60%),
-    radial-gradient(700px 380px at 70% 30%, rgba(162,195,203,0.45), transparent 60%),
-    radial-gradient(800px 420px at 45% 80%, rgba(198,144,162,0.28), transparent 60%),
+    radial-gradient(900px 450px at 12% 18%, rgba(160,205,167,0.55), transparent 60%),
+    radial-gradient(850px 420px at 72% 28%, rgba(162,195,203,0.55), transparent 60%),
+    radial-gradient(900px 480px at 45% 85%, rgba(198,144,162,0.30), transparent 60%),
     linear-gradient(180deg, rgba(248,245,242,1), rgba(248,245,242,0.65));
 }
 
 /* Layout spacing */
 .section { padding-top: 2.75rem; padding-bottom: 2.75rem; }
 
-/* Cards: rounded + soft shadow */
+/* Cards: light panels */
 .card {
+  background: rgba(255,255,255,0.88);
   border-radius: 18px;
   border: 1px solid rgba(137,134,159,0.14);
   box-shadow: 0 12px 28px rgba(47,43,58,0.06);
 }
-.card .title { color: var(--ink); }
+.card .title, .title, .subtitle { color: var(--ink) !important; }
 
-/* Links */
-a { color: var(--link); }
-a:hover { text-decoration: underline; }
-
-/* Buttons: create your own “accent” button */
+/* Buttons */
 .button.is-accent {
-  background: rgba(162,195,203,0.65); /* mist */
+  background: rgba(162,195,203,0.65);
   border-color: rgba(137,134,159,0.18);
   color: var(--ink);
 }
 .button.is-accent:hover { filter: brightness(0.98); }
 
 .button.is-light {
-  background: rgba(255,255,255,0.70);
+  background: rgba(255,255,255,0.72);
   border-color: rgba(137,134,159,0.18);
 }
 
-/* Tags: pastel pills */
+/* Tags */
+.tag.is-sea   { background: rgba(160,205,167,0.32); color: var(--ink); }
+.tag.is-mist  { background: rgba(162,195,203,0.32); color: var(--ink); }
+.tag.is-sand  { background: rgba(235,211,162,0.40); color: var(--ink); }
 .tag.is-lav   { background: rgba(137,134,159,0.22); color: var(--ink); }
-.tag.is-sea   { background: rgba(160,205,167,0.28); color: var(--ink); }
-.tag.is-mist  { background: rgba(162,195,203,0.28); color: var(--ink); }
-.tag.is-sand  { background: rgba(235,211,162,0.35); color: var(--ink); }
-.tag.is-rose  { background: rgba(198,144,162,0.25); color: var(--ink); }
-.tag.is-peach { background: rgba(230,191,171,0.35); color: var(--ink); }
+.tag.is-rose  { background: rgba(198,144,162,0.26); color: var(--ink); }
+.tag.is-peach { background: rgba(230,191,171,0.38); color: var(--ink); }
 
-/* Small helper */
-.muted { opacity: 0.82; }
+/* Make the whole site feel “welcoming” */
+.container { max-width: 1040px; }
+hr { background-color: rgba(137,134,159,0.18); }
