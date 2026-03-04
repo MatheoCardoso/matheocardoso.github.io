@@ -5,163 +5,139 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CARDOSO Mathéo — Political Science</title>
 
-  <!-- Simple, good-looking default styles (no install) -->
-  @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <link rel="stylesheet" href="assets/custom.css">
 
   <style>
-    /* Small customization layer */
-    header.hero { padding-top: 3rem; padding-bottom: 1rem; }
-    .muted { opacity: .75; }
-    .pill { display:inline-block; padding:.15rem .55rem; border:1px solid var(--pico-muted-border-color); border-radius:999px; font-size:.85rem; margin-right:.35rem; }
-    footer { margin-top: 3rem; }
+    /* Optional tiny extras */
+    .muted { opacity: .8; }
   </style>
 </head>
-<body>
-  <!-- HERO -->
-<section class="hero is-soft">
-  <div class="hero-body">
-    <div class="container">
-      <p class="title mb-2">Your Name</p>
-      <p class="subtitle">Political Science • Your research focus in one line</p>
 
-      <div class="buttons">
-        <a class="button is-accent" href="publications.html">Publications</a>
-        <a class="button is-light" href="news.html">News</a>
-        <a class="button is-light" href="media.html">Media</a>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <strong>CARDOSO Mathéo</strong>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="publications.html">Publications</a>
+        <a class="navbar-item" href="news.html">News</a>
+        <a class="navbar-item" href="media.html">Media</a>
+        <a class="navbar-item" href="about.html">About</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- MAIN CONTENT -->
-<section class="section">
-  <div class="container">
-    <div class="columns is-variable is-6">
-      <!-- Left: Overview -->
-      <div class="column is-8">
-        <h2 class="title is-4">Research overview</h2>
-        <p class="mb-4">
-          Short CNRS-style paragraph: what you study, why it matters, and your main approach.
-        </p>
+  <!-- HERO -->
+  <section class="hero is-soft">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title mb-2">CARDOSO Mathéo</h1>
+        <p class="subtitle mb-4">Political Science • (your focus in one line)</p>
 
-        <div class="tags">
-          <span class="tag is-accent">Comparative politics</span>
-          <span class="tag is-mint">Public policy</span>
-          <span class="tag is-rose">Political economy</span>
+        <div class="buttons">
+          <a class="button is-accent" href="publications.html">Publications</a>
+          <a class="button is-light" href="news.html">News</a>
+          <a class="button is-light" href="media.html">Media</a>
         </div>
 
-        <hr>
+        <p class="muted mt-3">
+          <a href="mailto:matcard18@gmail.com">matcard18@gmail.com</a>
+          &nbsp;·&nbsp;
+          <a href="https://github.com/yourname">GitHub</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/yourname">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <h2 class="title is-4">Featured publication</h2>
-        <div class="card">
-          <div class="card-content">
-            <p class="title is-5 mb-2">Working Paper Title (2026)</p>
-            <p class="content">
-              1–2 sentence abstract-style summary.
-            </p>
-            <div class="buttons">
-              <a class="button is-small is-accent" href="assets/papers/working-paper-1.pdf">PDF</a>
-              <a class="button is-small is-light" href="publications.html">All publications</a>
+  <!-- MAIN -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-variable is-6">
+        <!-- Left -->
+        <div class="column is-8">
+          <h2 class="title is-4">Research overview</h2>
+          <p class="mb-4">
+            Write 3–5 lines in a CNRS-like style: your main topic, your approach, and why it matters.
+          </p>
+
+          <div class="tags">
+            <span class="tag is-accent">Comparative politics</span>
+            <span class="tag is-mint">Public policy</span>
+            <span class="tag is-rose">Political economy</span>
+          </div>
+
+          <hr>
+
+          <h2 class="title is-4">Featured publication</h2>
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-5 mb-2">Working Paper Title (2026)</p>
+              <p class="content">
+                1–2 sentence abstract-style summary.
+              </p>
+              <div class="buttons">
+                <a class="button is-small is-accent" href="assets/papers/working-paper-1.pdf">PDF</a>
+                <a class="button is-small is-light" href="publications.html">All publications</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="column is-4">
+          <h2 class="title is-4">Latest</h2>
+
+          <div class="card mb-4">
+            <div class="card-content">
+              <p class="heading">2026-03-04</p>
+              <p class="title is-6">New working paper released</p>
+              <a href="news.html">Read more →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <p class="heading">Media</p>
+              <p class="title is-6">YouTube explainers</p>
+              <a href="media.html">Watch →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right: News -->
-      <div class="column is-4">
-        <h2 class="title is-4">Latest</h2>
-
-        <div class="card">
-          <div class="card-content">
-            <p class="heading">2026-03-04</p>
-            <p class="title is-6">New working paper released</p>
-            <a href="news.html">Read more →</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <p class="heading">Media</p>
-            <p class="title is-6">YouTube explainers</p>
-            <a href="media.html">Watch →</a>
-          </div>
-        </div>
-      </div>
+      <footer class="has-text-centered mt-6 muted">
+        <small>© <span id="y"></span> CARDOSO Mathéo</small>
+      </footer>
     </div>
-  </div>
-</section>
-  <main class="container">
-    <nav>
-      <ul>
-        <li><strong>CARDOSO Mathéo</strong></li>
-      </ul>
-      <ul>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-
-    <header class="hero">
-      <h1>Political Science</h1>
-      <p class="muted">
-        Short description of your research focus (e.g., political economy, institutions, public policy).
-      </p>
-      <p>
-        <a role="button" href="publications.html">Read my papers</a>
-        <a class="secondary" role="button" href="news.html">Latest updates</a>
-      </p>
-      <p class="muted">
-        <a href="https://github.com/yourname">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/yourname">LinkedIn</a> ·
-        <a href="mailto:you@email.com">matcard18@gmail.com</a>
-      </p>
-    </header>
-
-    <hr />
-
-    <section>
-      <h2>Research themes</h2>
-      <p class="muted">A short “CNRS-like” overview paragraph describing what you work on and why it matters.</p>
-      <p>
-        <span class="pill">Comparative politics</span>
-        <span class="pill">Public policy</span>
-        <span class="pill">Elections</span>
-        <span class="pill">Political economy</span>
-      </p>
-    </section>
-
-    <section>
-      <h2>Featured</h2>
-      <div class="grid">
-        <article>
-          <h3>New working paper</h3>
-          <p class="muted">One sentence summary of the research question and your contribution.</p>
-          <p><a href="publications.html">View publication →</a></p>
-        </article>
-        <article>
-          <h3>Latest update</h3>
-          <p class="muted">E.g., “Presented at X” or “Data release” or “New preprint uploaded”.</p>
-          <p><a href="news.html">Read news →</a></p>
-        </article>
-        <article>
-          <h3>Media</h3>
-          <p class="muted">Links to explainers, interviews, and future YouTube videos.</p>
-          <p><a href="media.html">Browse media →</a></p>
-        </article>
-      </div>
-    </section>
-
-    <footer class="muted">
-      <small>© <span id="y"></span> CARDOSO Mathéo</small>
-    </footer>
-  </main>
+  </section>
 
   <script>
+    // year
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // mobile burger toggle
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.getElementById("navMenu");
+    if (burger && menu) {
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("is-active");
+        menu.classList.toggle("is-active");
+      });
+    }
   </script>
 </body>
 </html>
