@@ -1,1 +1,30 @@
+<head>
+  ...
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/custom.css?v=2">
+</head>
+<body>
+  <!-- navbar (same everywhere) -->
+  ...navbar...
 
+  <!-- optional hero only on index -->
+  <!-- page content -->
+  <section class="section">
+    <div class="container">
+      ...content...
+      <footer class="has-text-centered mt-6 muted">
+        <small>© <span class="year"></span> CARDOSO Mathéo</small>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll(".year").forEach(el => el.textContent = new Date().getFullYear());
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.getElementById("navMenu");
+    if (burger && menu) burger.addEventListener("click", () => {
+      burger.classList.toggle("is-active");
+      menu.classList.toggle("is-active");
+    });
+  </script>
+</body>
